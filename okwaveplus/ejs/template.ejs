@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<title><%= pageData.title %></title>
+	<meta name="description" content="<%= pageData.description %>">
+	<meta name="keywords" content="<%= pageData.keyword %>">
+	<meta name="format-detection" content="telephone=no">
+	
+	<meta property="og:type" content="article">
+	<meta property="og:url" content="#">
+	<meta property="og:site_name" content="サポートシェアリングソリューション OKWAVE Plus">
+	<meta property="og:title" content="OKWAVE Plus | サポートシェアリングソリューション">
+	<meta property="og:description" content="ユーザー同士の助け合いのチカラによって実現する新しいサポートチャネル｜OKWAVE Plus">
+	
+	<link type="text/css" rel="stylesheet" href="<%= RELATIVE_PATH %>js/slick/slick-theme.css">
+	<link type="text/css" rel="stylesheet" href="<%= RELATIVE_PATH %>js/slick/slick.css">
+	<link type="text/css" rel="stylesheet" href="<%= RELATIVE_PATH %>css/styles.css">
+</head>
+<body>
+
+	<%- include('common/_header'); %>
+	<%- include(pageData.template, {datalabel:'data'}) %>
+	<%- include('common/_footer'); %>
+
+	<script src="<%= RELATIVE_PATH %>js/jquery-3.3.1.min.js"></script>
+	<script src="<%= RELATIVE_PATH %>js/jquery.matchHeight-min.js"></script>
+	<script src="<%= RELATIVE_PATH %>js/slick/slick.min.js"></script>
+	<script src="<%= RELATIVE_PATH %>js/ofi.min.js"></script>
+	<script src="<%= RELATIVE_PATH %>js/setting.js"></script>
+</body>
+</html>

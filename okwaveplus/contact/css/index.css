@@ -1,0 +1,441 @@
+@charset "UTF-8";
+/* ----------------------------------------------------------------------------------
+リセット　_reset.scss
+---------------------------------------------------------------------------------- */
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  vertical-align: baseline;
+  background: transparent;
+  font-style: normal !important;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: system-ui,-apple-system,BlinkMacSystemFont,"Helvetica Neue",Helvetica,Arial,Hiragino Kaku Gothic ProN,Hiragino Sans,ヒラギノ角ゴ ProN W3,メイリオ,Meiryo,sans-serif !important;
+  font-weight: 500;
+  box-sizing: border-box;
+}
+
+@media all and (-ms-high-contrast: none) {
+  html {
+    font-family: 'メイリオ', 'Meiryo', sans-serif;
+  }
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 62.5%;
+  }
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  line-height: 1;
+  margin: 0;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  color: #000;
+}
+
+ol, ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+  font-weight: normal;
+}
+
+img {
+  vertical-align: bottom;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+a:hover {
+  opacity: 0.6;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+input, select {
+  vertical-align: middle;
+}
+
+/*CLEARFIX*/
+.cf {
+  zoom: 1;
+}
+
+.cf:before, .cf:after {
+  content: "";
+  display: table;
+}
+
+.cf:after {
+  clear: both;
+}
+
+section {
+  zoom: 1;
+  clear: both;
+}
+
+section:before, section:after {
+  content: "";
+  display: table;
+}
+
+section:before, section:after {
+  clear: both;
+}
+
+
+/*＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊
+            共通
+＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊*/
+body {
+  font-family: system-ui,-apple-system,BlinkMacSystemFont,"Helvetica Neue",Helvetica,Arial,Hiragino Kaku Gothic ProN,Hiragino Sans,ヒラギノ角ゴ ProN W3,メイリオ,Meiryo,sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #000;
+}
+
+p:last-child,
+ul:last-child,
+ol:last-child {
+  margin-bottom: 0;
+}
+
+p{
+  font-size:1.6rem;
+  line-height:1.8;
+}
+
+@media (min-width: 768px) {
+  p{
+    font-size:1.8rem;
+  }
+}
+
+.shadow{
+  box-shadow: 3px 3px 10px gray !important;
+}
+
+.tit-1{
+  font-size:2.0rem;
+  text-align:center;
+  margin-bottom:25px;
+  Color:#FFF;
+  font-weight:700;
+}
+
+@media (min-width: 768px) {
+.tit-1{
+  font-size:3.2rem;
+  margin-bottom:25px;
+}
+}
+
+.tit-1 + img{
+  margin-bottom:30px;
+}
+
+
+.tit-2{
+  font-size:2.0rem;
+  text-align:center;
+  margin-bottom:15px;
+  font-weight:700;
+}
+
+@media (min-width: 768px) {
+  .tit-2{
+    font-size:2.4rem;
+    margin-bottom:30px;
+  }
+}
+
+.list-1{
+  font-size:1.6rem;
+}
+
+@media (min-width: 768px) {
+  .list-1{
+    font-size:1.8rem;
+  }
+}
+
+.list-1 li{
+  margin-bottom:15px;
+}
+
+
+.btn{
+  padding: 10px 20px;
+}
+
+.btn-box a{
+  font-size:1.8rem;
+}
+
+
+@media (min-width: 768px) {
+.btn-box a{
+  font-size:2.0rem;
+}
+}
+.footerCopyright{
+  font-size: 1.5rem;
+}
+
+/*＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊
+            レイアウト
+＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊*/
+
+/* sp
+------------------------------------*/
+header {
+  background: #FFF;
+}
+
+.head-group {
+  text-align: center;
+}
+
+/* pc
+------------------------------------*/
+@media (min-width: 768px) {
+  header {
+    height: auto;
+  }
+  .head-group {
+    height: 4.0rem;
+  }
+}
+
+@media (max-width: 767px) {
+.container{
+  padding-left: 15px;
+  padding-right: 15px;
+}
+}
+.inner-container{
+  max-width: 720px;
+  margin:0 auto;
+}
+
+/*＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊
+        上下のスペース
+＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊*/
+main > section{
+  padding: 2.0rem 0;
+}
+
+@media (min-width: 768px) {
+  main > section{
+    padding: 4.0rem 0;
+  }
+}
+
+footer{
+  padding: 2.0rem 0;
+  background: #0b3880;
+  color: #FFF;
+
+}
+
+/*:::::::::::::::::::::::::::::::::::::::::::::::
+
+汎用 
+
+:::::::::::::::::::::::::::::::::::::::::::::::*/
+/* 表示・非表示
+------------------------------------*/
+@media screen and (min-width: 768px) {
+  .pcN {
+    display: none !important;
+  }
+  .spN {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .pcN {
+    display: block !important;
+  }
+  .spN {
+    display: none;
+  }
+}
+
+
+.hero-box {
+        background-image: url(../images/mainimage_pc.png);
+        background-size: cover;
+        position: relative;
+        background-position: bottom center;
+        margin-bottom: 0;
+        padding: 20px 0;
+      }
+
+@media (min-width: 768px) {
+  .hero-box {
+    position: relative;
+    background-position: bottom center;
+    margin-bottom: 0;
+    padding: 20px 0;
+  }
+  .hero-box .hero-contents-box {
+
+  }
+}
+
+
+/*thunks*/
+.thunks-page .hero-box{
+  background: none;
+}
+
+.thunks-page .tit-1{
+  color: #000;
+  margin-bottom: 0;
+}
+
+.thunks-page .btn-box{
+  margin: 30px 0 50px 0;
+}
+
+@media (min-width: 768px) {
+  .thunks-page .btn-box{
+    margin: 40px 0 100px 0;
+  }
+}
+
+.wrapper{
+  min-height: 100vh;
+  position: relative;
+  padding-bottom: 60px;/*←footerの高さ*/
+  box-sizing: border-box;/*←全て含めてmin-height:100vhに*/
+}
+
+.wrapper footer{
+position: absolute;/*←絶対位置*/
+  bottom: 0; /*下に固定*/
+  width: 100%;
+}

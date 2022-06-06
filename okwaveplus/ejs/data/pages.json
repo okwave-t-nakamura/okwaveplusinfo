@@ -1,0 +1,28 @@
+{
+	"pages": [
+		{
+			"id": "index",
+			"parentId1": "",
+			"parentId2": "",
+			"parentId3": "",
+			"parentId4": "",
+			"bread1": "",
+			"bread2": "",
+			"bread3": "",
+			"bread4": "",
+			"bread5": "",
+			"bread1_url": "/",
+			"bread2_url": "",
+			"bread3_url": "",
+			"bread4_url": "",
+			"bread5_url": "",
+			"template": "index",
+			"title": "OKWAVE Plus | サポートシェアリングソリューション ",
+			"description": "ユーザー同士の助け合いのチカラによって実現する新しいサポートチャネル",
+			"description_meta": "",
+			"keyword": "",
+			"h1": "",
+			"depth": 0
+		}
+	]
+}

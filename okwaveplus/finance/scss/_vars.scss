@@ -1,0 +1,130 @@
+/* ====================================================
+Font
+==================================================== */
+
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP:100,300,400,500,700&subset=japanese');
+
+$font-gothic: "ヒラギノ角ゴPro W3","Hiragino Kaku Gothic Pro", Osaka,"Meiryo","メイリオ","MS Pゴシック",Arial, Helvetica, Verdana,sans-serif;
+$font-mincho: YuMincho,"游明朝", "游明朝体", "ヒラギノ明朝 ProN", "Hiragino Mincho ProN", 'Sawarabi Mincho',"Yu Mincho","ＭＳ 明朝", "MS Mincho", "HiraMinProN-W3", "TakaoEx明朝", TakaoExMincho, "MotoyaLCedar", "Droid Sans Japanese", serif;
+$font-Yugothic: "游ゴシック体", "Yu Gothic", YuGothic,"ヒラギノ角ゴPro W3","Hiragino Kaku Gothic Pro", Osaka,"Meiryo","メイリオ","MS Pゴシック",Arial, Helvetica, Verdana,sans-serif;
+$font-notoSannsJp:'Noto Sans JP', Arial, Helvetica, Verdana,sans-serif;
+
+
+@mixin font-size($sizeValue) {
+	//font-size: ($sizeValue) + px;
+	font-size: ($sizeValue / 10) + rem;
+}
+
+
+@mixin ob {
+	object-fit: cover;
+	font-family: 'object-fit: cover';
+}
+
+
+@function vw($element-size) {
+	$vwSize: ($element-size / 1024) * 100;
+	@return #{$vwSize}vw;
+}
+
+@mixin ie{
+	@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+		@content;
+	}
+}
+
+
+@mixin v-align {
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	   -moz-transform: translateY(-50%);
+	    -ms-transform: translateY(-50%);
+	     -o-transform: translateY(-50%);
+	        transform: translateY(-50%);
+}
+
+@mixin h-align {
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	   -moz-transform: translateX(-50%);
+	    -ms-transform: translateX(-50%);
+	     -o-transform: translateX(-50%);
+	        transform: translateX(-50%);
+}
+
+@mixin v-h-align {
+	left: 50%;
+	top: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	   -moz-transform: translate(-50%, -50%);
+	    -ms-transform: translate(-50%, -50%);
+	     -o-transform: translate(-50%, -50%);
+	        transform: translate(-50%, -50%);
+}
+
+@mixin smooth-transition {
+	-webkit-backface-visibility: hidden;
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+}
+
+
+@mixin palt {
+	font-feature-settings: "palt" 1;
+}
+
+/* ====================================================
+Media Quary
+==================================================== */
+@mixin mq($breakpoint: md) {
+	@media #{map-get($breakpoints, $breakpoint)} {
+		@content;
+	}
+}
+
+$breakpoint-sm: 640px !default;
+$breakpoint-md: 834px !default;
+$breakpoint-lg: 990px !default;
+
+$breakpoints: (
+		'xs': 'screen and (max-width: 374px)',
+		'sm': 'screen and (max-width: 640px)',
+		'md-767': 'screen and (max-width: 767px)',
+		'md': 'screen and (max-width: 834px)',
+		'lg': 'screen and (max-width: 990px)',
+		'ipd': 'screen and (max-width: 1024px)',
+		'xl': 'screen and (max-width: 1150px)',
+		'lp': 'screen and (max-width: 1440px)',
+		'mac': 'screen and (max-width: 1770px)',
+		'xs-min': 'screen and (min-width: 375px)',
+		'sm-min': 'screen and (min-width: 641px)',
+		'md-767-min': 'screen and (min-width: 768px)',
+		'md-min': 'screen and (min-width: 835px)',
+		'lg-min': 'screen and (min-width: 991px)',
+		'ipd-min': 'screen and (min-width: 1025px)',
+		'xl-min': 'screen and (min-width: 1151px)',
+) !default;
+
+
+//marginPC and SP
+@for $i from 1 through 100 {
+	@include mq(md-min){
+		.mbpc-#{$i} {
+			margin-bottom: $i + px !important;
+		}
+	}
+	@include mq(){
+		.mbsp-#{$i} {
+			margin-bottom: $i + px !important;
+		}
+	}
+}
+.mb0{
+	margin-bottom: 0 !important;
+}

@@ -1,0 +1,245 @@
+
+body {
+	color: #3c3c3c;
+	font-family: $font-notoSannsJp;
+	font-size: 100%;
+	-webkit-font-smoothing: antialiased;
+	line-height: 1.4;
+	overflow: hidden;
+}
+
+
+
+//header
+.header{
+	position: fixed;
+	z-index: 999;
+	top: 0;
+	left: 0;
+	right: 0;
+	background: white;
+	@include font-size(12);
+	font-weight: 500;
+	color: #000000;
+	@include mq {
+		@include font-size(11.5);
+	}
+	.inner {
+		display: flex;
+		align-items: center;
+		height: 56px;
+		@include mq {
+			height: 44px;
+			padding: 0 13px;
+		}
+	}
+	&-logo {
+		width: 203px;
+		@include mq(ipd) {
+			width: 160px;
+		}
+		@include mq {
+			width: 74px;
+			position: relative;
+			top: -1px;
+		}
+	}
+	
+	&-nav {
+		display: flex;
+		align-items: center;
+		margin-left: auto;
+		width: calc(100% - 203px);
+		padding: 0 60px 2px 15px;
+		max-width: 653px;
+		@include mq(ipd) {
+			padding: 0 0 0 15px;
+			width: calc(100% - 160px);
+		}
+		@include mq {
+			padding: 0 0 0 0;
+			width: auto;
+		}
+	}
+	&-menu {
+		display: flex;
+		@include mq(sm) {
+			margin: 0 39px 1px 0;
+		}
+		&__item {
+			margin: 0 42px 4px 0;
+			@include mq(sm) {
+				margin: 0 0 0 24px;
+			}
+			> a {
+				position: relative;
+			}
+		}
+	}
+	&-btn {
+		display: flex;
+		align-items: center;
+		margin-left: auto;
+	}
+	&-control {
+		position: relative;
+		display: none;
+		@include mq {
+			display: block;
+			width: 41px;
+			height: 29px;
+			margin: 0 0 6px auto;
+		}
+		span {
+			position: absolute;
+			width: 100%;
+			left: 0;
+			height: 3px;
+			background: #000;
+			@include smooth-transition;
+			&:first-child {
+				top: 0;
+			}
+			&:nth-of-type(2) {
+				top: 44%;
+			}
+			&:last-child {
+				bottom: 0;
+			}
+		}
+		&.close {
+			span {
+				&:first-child {
+					top: 46%;
+					transform: rotate(45deg);
+				}
+				&:nth-of-type(2) {
+					opacity: 0;
+				}
+				&:last-child {
+					bottom: 46%;
+					transform: rotate(-45deg);
+				}
+			}
+		}
+	}
+}
+
+// main-page
+.main-page {
+	margin-top: 56px;
+	@include mq {
+		margin-top: 44px;
+	}
+}
+
+//footer
+.footer{
+	padding: 71px 0 0;
+	background-image: url("../img/common/f-person-01.jpg"), url("../img/common/f-person-02.jpg");
+	background-repeat: no-repeat;
+	background-position: bottom 38.1% left 9.2%, top 23.8% right 11.1%;
+	@include mq {
+		padding: 26px 0 0;
+		background-size: 100px auto, 82px auto;
+		background-position: top 194px left 11px, top 191px right 15px;
+	}
+	&-inn {
+		text-align: center;
+		padding: 0 15px 23px;
+		@include mq {
+			padding: 0 15px 15px;
+		}
+	}
+	&-txt {
+		font-weight: 500;
+		@include font-size(28);
+		margin-bottom: 44px;
+		@include mq(ipd) {
+			@include font-size(25);
+		}
+		@include mq {
+			@include font-size(21.5);
+			margin-bottom: 21px;
+		}
+	}
+	&-btn {
+		margin-bottom: 63px;
+		@include mq {
+			margin-bottom: 126px;
+		}
+	}
+	&-b {
+		padding: 17px 0 24px;
+		@include mq {
+			padding: 15px 0 14px;
+		}
+		.inner {
+			display: flex;
+			align-items: center;
+			padding-right: 9px;
+			@include mq {
+				padding: 0 11px;
+			}
+		}
+	}
+	&-logo {
+		img {
+			@include mq {
+				width: 101px;
+			}
+		}
+	}
+	&-menu {
+		@include font-size(13);
+		font-weight: 500;
+		@include mq {
+			@include font-size(9.5);
+		}
+		> * {
+			display: inline-block;
+			margin-right: 30px;
+			position: relative;
+			@include mq {
+				margin-right: 20px;
+			}
+			&:last-child {
+				&:after {
+					display: none;
+				}
+			}
+			&:after {
+				position: absolute;
+				content: '';
+				top: 3px;
+				bottom: 1px;
+				right: -15px;
+				background: white;
+				width: 1px;
+				@include mq {
+					right: -11px;
+				}
+			}
+		}
+	}
+	.copyright {
+		@include font-size(11);
+		font-weight: 500;
+		margin: 5px 0 0 auto;
+		@include mq {
+			@include font-size(7);
+		}
+	}
+}
+
+
+
+.is-locked {
+	overflow: hidden;
+	-ms-touch-action: none;
+	touch-action: none;
+	
+	body {
+		-webkit-overflow-scrolling: auto;
+	}
+}
