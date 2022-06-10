@@ -1,0 +1,97 @@
+{
+	"name": "okwaveInfo",
+	"version": "1.0.0",
+	"description": "",
+	"main": "postcss.config.js",
+	"directories": {
+		"doc": "doc"
+	},
+	"scripts": {
+
+		"stylelint": "stylelint src/brand/scss --fix && stylelint src/finance/scss --fix && stylelint src/municipality/scss --fix",
+		"autoprefixBrand": "postcss --use autoprefixer --no-map css/mod/ -d css/mod",
+		"watchBrand:sass": "sass src/brand/scss/:src/brand/css/ --no-source-map --watch",
+		"stylelintBrand": "stylelint src/brand/scss --fix",
+		"watchBrand:stylelint": "chokidar \"src/brand/scss/\" -c \"npm run stylelintBrand\" --initial",
+		"watchBrand:postcss": "postcss src/brand/css --base src/brand/css --use autoprefixer --dir css/mod --no-map --watch",
+		"endBrand:css": "postcss src/brand/css --base src/brand/css --dir css/mod",
+		"all": "run-p watchBrand:*",
+		"end": "run-p endBrand:*",
+
+		"autoprefixFinance": "postcss --use autoprefixer --no-map finance/css/mod/ -d finance/css/mod",
+		"watchFinance:sass": "sass src/finance/scss/:src/finance/css/ --no-source-map --watch",
+		"stylelintFinance": "stylelint src/finance/scss --fix",
+		"watchFinance:stylelint": "chokidar \"src/finance/scss/\" -c \"npm run stylelintFinance\" --initial",
+		"watchFinance:postcss": "postcss src/finance/css --base src/finance/css --use autoprefixer --dir finance/css/mod --no-map --watch",
+		"endFinance:css": "postcss src/finance/css --base src/finance/css --dir finance/css/mod",
+		"all-f": "run-p watchFinance:*",
+		"end-f": "run-p endFinance:*",
+
+		"autoprefixMunicipality": "postcss --use autoprefixer --no-map municipality/css/mod/ -d municipality/css/mod",
+		"watchMunicipality:sass": "sass src/municipality/scss/:src/municipality/css/ --no-source-map --watch",
+		"stylelintMunicipality": "stylelint src/municipality/scss --fix",
+		"watchMunicipality:stylelint": "chokidar \"src/municipality/scss/\" -c \"npm run stylelintFinance\" --initial",
+		"watchMunicipality:postcss": "postcss src/municipality/css --base src/municipality/css --use autoprefixer --dir municipality/css/mod --no-map --watch",
+		"endMunicipality:css": "postcss src/municipality/css --base src/municipality/css --dir municipality/css/mod",
+		"all-m": "run-p watchMunicipality:*",
+		"end-m": "run-p endMunicipality:*",
+
+
+		"serve": "PORT=5000 serve"
+	},
+	"repository": {
+		"type": "",
+		"url": ""
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": ""
+	},
+	"homepage": "",
+	"devDependencies": {
+		"autoprefixer": "^10.4.7",
+		"browserslist": "^4.20.4",
+		"bufferutil": "^4.0.6",
+		"chokidar-cli": "^3.0.0",
+		"concurrently": "^7.2.1",
+		"cssnano": "^5.1.11",
+		"ejs-cli": "^2.2.3",
+		"ejs-lint": "^1.2.2",
+		"eslint": "^8.17.0",
+		"eslint-config-prettier": "^8.5.0",
+		"eslint-config-standard": "^17.0.0",
+		"eslint-plugin-import": "^2.26.0",
+		"eslint-plugin-node": "^11.1.0",
+		"eslint-plugin-prettier": "^4.0.0",
+		"eslint-plugin-promise": "^6.0.0",
+		"install": "^0.13.0",
+		"npm-run-all": "^4.1.5",
+		"onchange": "^7.1.0",
+		"postcss": "^8.4.14",
+		"postcss-cli": "^9.1.0",
+		"postcss-html": "^1.4.1",
+		"prettier": "^2.6.2",
+		"prettier-eslint": "^15.0.1",
+		"prettier-eslint-cli": "^6.0.1",
+		"prettier-stylelint": "^0.4.2",
+		"sass": "^1.52.3",
+		"serve": "^13.0.2",
+		"stylelint": "^14.9.0",
+		"stylelint-config-prettier": "^9.0.3",
+		"stylelint-config-recess-order": "^3.0.0",
+		"stylelint-config-recommended-scss": "^6.0.0",
+		"stylelint-config-standard": "^26.0.0",
+		"stylelint-config-standard-scss": "^4.0.0",
+		"stylelint-order": "^5.0.0",
+		"stylelint-scss": "^4.2.0",
+		"utf-8-validate": "^5.0.9",
+		"warun": "^1.0.0"
+	},
+	"browserslist": [
+		"last 2 versions"
+	],
+	"dependencies": {
+		"stylelint-prettier": "^2.0.0"
+	}
+}

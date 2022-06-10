@@ -1,0 +1,10 @@
+{
+  "env": {
+    "browser": true, // document や console にエラーが出ないようにする
+    "es6": true, // es6から使える let や const にエラーがでないようにする
+},
+  "extends": ["eslint:all", "prettier"], // ESLintの推奨設定をベースにする
+  "rules": {
+    "require-jsdoc": "off", //Docコメントがなくても怒られないようにする
+}
+}

@@ -1,0 +1,81 @@
+{
+  "html": {
+    "allowed_file_extensions": [
+        "htm",
+        "html",
+        "xhtml",
+        "shtml",
+        "xml",
+        "svg"
+    ],
+    "brace_style": "collapse",
+    "end_with_newline": true,
+    "indent_char": " ",
+    "indent_handlebars": true,
+    "indent_with_tabs": true,  // インデントにタブを使用するか
+    "indent_inner_html": true, // htmlタグ直下のheadタグ、bodyタグをインデント
+    "indent_scripts": "normal", // scriptタグ内のインデントをhtmlに合わせるか
+    "indent_size": 4,// インデント幅
+    "max_preserve_newlines": 10, // タグ間で許可する最大空行数
+    "preserve_newlines": true,  // 空行の許可設定。falseで空行を全て削除
+    "unformatted": [
+        "a",
+        "span",
+        "img",
+        "code",
+        "pre",
+        "sub",
+        "sup",
+        "em",
+        "strong",
+        "b",
+        "i",
+        "u",
+        "strike",
+        "big",
+        "small",
+        "pre",
+        "h1",
+        "h2",
+        "h3",
+        "h4",
+        "h5",
+        "h6",
+        "button"
+    ],
+        "wrap_line_length": 0
+    },
+    "css": {
+        "allowed_file_extensions": ["css", "scss"],
+        "end_with_newline": true, // trueで最終行に改行を自動挿入します。このままでOK。
+        "indent_char": " ", // インデントに使用する文字を設定します。デフォルトはスペースです。
+        "indent_size": 4,
+        "newline_between_rules": true,
+        "selector_separator": " ",
+        "selector_separator_newline": true,// セレクタの間で改行するか
+        "preserve_newlines": true, // 空行の許可設定。falseで空行を全て削除します。trueで空行を許可します。
+        "max_preserve_newlines": 10 // 許可する空行の最大値を設定します。
+    },
+    "js": {
+        "allowed_file_extensions": ["js", "json", "jshintrc", "jsbeautifyrc"],
+        "brace_style": "collapse",
+        "break_chained_methods": false,
+        "e4x": false,
+        "end_with_newline": false,
+        "indent_char": " ",
+        "indent_level": 0,
+        "indent_size": 4,
+        "indent_with_tabs": false,
+        "jslint_happy": false,
+        "keep_array_indentation": false,
+        "keep_function_indentation": false,
+        "max_preserve_newlines": 0,
+        "preserve_newlines": true,
+        "space_after_anon_function": false,
+        "space_before_conditional": true,
+        "space_in_empty_paren": false,
+        "space_in_paren": false,
+        "unescape_strings": false,
+        "wrap_line_length": 0
+    }
+}

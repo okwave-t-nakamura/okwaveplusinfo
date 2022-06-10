@@ -1,0 +1,15 @@
+{
+    "tabWidth": 4,
+    "semi": true,
+    "overrides": [
+        {
+            "files": ["*.html"],
+            "options": {
+                "printWidth": 400,
+                "tabWidth": 4,
+				"useTabs": true,
+                "htmlWhitespaceSensitivity": "ignore"
+            }
+        }
+    ]
+}

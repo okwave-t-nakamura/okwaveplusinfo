@@ -1,0 +1,29 @@
+.htaccess
+
+# .svn フォルダ
+# ディレクトリは最後にスラッシュ
+# .svn/
+
+# /tmp のように '/' から始めれば
+# カレントディレクトリの tmp のみ無視
+# /hoge/tmp などは無視されない
+# /tmp
+
+# どのディレクトリかを問わず、file.phpを除外
+# file-a.php
+
+
+# 「_」で始まるファイルを追跡しない
+# _*
+_BK_*
+_End_*
+Copy*
+
+# 特定の拡張子を無視する
+*.ai
+*.psd
+.DS_Store
+
+# npmのnode_modulesを無視
+node_modules/
+package-lock.json

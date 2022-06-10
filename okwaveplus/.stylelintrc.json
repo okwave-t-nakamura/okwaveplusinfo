@@ -1,0 +1,76 @@
+{
+	"plugins": [
+		"stylelint-scss",
+		"stylelint-prettier"
+	],
+	"extends": [
+		"stylelint-config-standard",
+		"stylelint-config-standard-scss",
+		"stylelint-config-recommended-scss",
+		"stylelint-config-prettier"
+	],
+	"rules": {
+		"function-whitespace-after": "always",
+		"no-descending-specificity":null,
+		"at-rule-no-unknown": null,
+		"scss/at-rule-no-unknown": true,
+		"block-closing-brace-empty-line-before":"never",
+		"block-closing-brace-newline-before":"always",
+		"block-closing-brace-newline-after":"always",
+		"comment-empty-line-before": "always",
+		"comment-whitespace-inside": "always",
+		"scss/double-slash-comment-whitespace-inside": null,
+		"color-hex-length": "short",
+		"no-duplicate-selectors": null,
+		"declaration-block-semicolon-newline-after":"always",
+		"declaration-colon-newline-after":"always-multi-line",
+		"length-zero-no-unit": true,
+		"scss/comment-no-empty":null,
+		"comment-no-empty":null,
+		"selector-attribute-operator-space-before":"always",
+		"selector-attribute-operator-space-after":"always",
+		"selector-attribute-brackets-space-inside":"always",
+		"selector-combinator-space-after":"always",
+		"at-rule-name-space-after": "always",
+		"selector-list-comma-newline-after":"always-multi-line",
+		"selector-pseudo-class-parentheses-space-inside":"always",
+		"no-eol-whitespace": true,
+		"max-line-length":null,
+		"indentation": 4,
+		"function-calc-no-unspaced-operator":true,
+		"declaration-bang-space-before": "always",
+		"declaration-colon-space-after": "always-single-line",
+		"value-list-comma-space-after": "always",
+		"block-opening-brace-space-before": "always",
+		"declaration-colon-space-before": "never",
+		"selector-id-pattern": null,
+		"selector-class-pattern": null,
+		"keyframes-name-pattern": null,
+		"scss/at-mixin-pattern": "^(([a-z][a-zA-Z0-9_]+)|([a-z][a-z0-9]*)(-[a-zA-Z0-9_]+)*)$",
+		"scss/dollar-variable-pattern": "^(([a-z][a-zA-Z0-9_]+)|([a-z][a-z0-9]*)(-[a-zA-Z0-9_]+)*)$",
+		"scss/percent-placeholder-pattern": null,
+		"scss/at-extend-no-missing-placeholder": null,
+		"scss/at-import-partial-extension": null,
+		"scss/no-global-function-names": null,
+		"scss/at-mixin-argumentless-call-parentheses": "always",
+		"function-linear-gradient-no-nonstandard-direction":null,
+		"function-url-quotes": ["always", { "severity": "warning" }],
+		"number-max-precision": [3, { "severity": "warning" }],
+		"alpha-value-notation": ["number", { "severity": "warning" }],
+		"property-no-vendor-prefix": [
+			true,
+			{
+			"ignoreProperties": ["appearance", "text-size-adjust"]
+			}
+		],
+		"function-no-unknown": [
+			true,
+			{
+				"ignoreFunctions": [
+					"/^map\\..+/",
+					"/^color\\..+/"
+				]
+			}
+		]
+	}
+}
